@@ -1,0 +1,1 @@
+# single-resource-rest-api
