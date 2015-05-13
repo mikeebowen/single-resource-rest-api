@@ -45,8 +45,8 @@ describe('Test Requests', function () {
       expect(res.body.wins).to.eql(12);
       expect(res.body.losses).to.eql(17);
       done();
-    })
-  })
+    });
+  });
 
   it('Should respond to PUT request by updating a team', function (done) {
     chai.request('localhost:3000')
@@ -56,8 +56,8 @@ describe('Test Requests', function () {
       expect(err).to.eql(null);
       expect(res.body.msg).to.eql('Red Sox has been updated');
       done();
-    })
-  })
+    });
+  });
 
   it('Should delete a team with a DELETE request', function (done) {
     chai.request('localhost:3000')
@@ -66,7 +66,7 @@ describe('Test Requests', function () {
       expect(err).to.eql(null);
       expect(res.body.msg).to.eql('team deleted');
       done();
-    })
-  })
+    });
+  });
 
-})
+});
