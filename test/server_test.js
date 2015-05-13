@@ -126,19 +126,5 @@ describe('Test Requests', function () {
   //   });
   // });
 
-  // it('should update or create a file with a PATCH request', function (done) {
-  //   chai.request('localhost:3000')
-  //   .patch('/api/teams/newteam/1')
-  //   .send({name: 'Brewers', wins: 1, losses: 90})
-  //   .end(function (err, res) {
-  //     expect(err).to.eql(null);
-  //     expect(typeof res.body).to.eql('object');
-  //     expect(res.body.name).to.eql('Brewers');
-  //     expect(res.body.wins).to.eql(1);
-  //     expect(res.body.losses).to.eql(90);
-  //     expect(res.body).to.have.property('_id');
-  //     done();
-  //   });
-  // });
 
 })

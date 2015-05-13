@@ -96,4 +96,19 @@ module.exports = function (router) {
   //   });
   // });
 
+  router.delete('/teams/delete/:id', function (req, res) {
+    sql.sync()
+    .then(function () {
+      Team.find({'id': req.params.id})
+      .then(function (data) {
+        data.destroy()
+        res.json({msg: 'team deleted'});
+      })
+    })
+    .error(function (err) {
+      console.log(err);
+      return res.status(500).json({msg: 'internal server error'})
+    })
+  });
+
 }
