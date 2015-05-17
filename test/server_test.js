@@ -46,7 +46,7 @@ describe('Test Requests', function () {
     expect(this.testTeam.losses).to.eql(1);
   })
 
-  // test get request
+  test get request
   it('Should respond to GET request with an array of teams', function (done) {
     chai.request('localhost:3000')
     .get('/api/teams')
