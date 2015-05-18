@@ -4,13 +4,13 @@ var User = require('../models/User');
 var bodyparser = require('body-parser');
 
 function makeRandomString () {
-    var outputString = '';
-    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+=<,>.?/';
-    var randomNumber = Math.ceil(Math.random() * 10) + 10;
-    for( var i = 0; i < randomNumber; i++ ){
-        outputString += possible.charAt(Math.floor(Math.random() * possible.length));
-    };
-    return outputString;
+  var outputString = '';
+  var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+=<,>.?/';
+  var randomNumber = Math.ceil(Math.random() * 10) + 10;
+  for ( var i = 0; i < randomNumber; i++ ) {
+    outputString += possible.charAt(Math.floor(Math.random() * possible.length));
+  };
+  return outputString;
 }
 
 module.exports = function (router, passport) {
@@ -60,7 +60,6 @@ module.exports = function (router, passport) {
   });
 
   router.get('/sign_in', passport.authenticate('basic', {session: false}), function (req, res) {
-    console.log('REQ.USER : ' + req.user);
     req.user.generateToken(process.env.APP_SECRET, function (err, token) {
       if (err) {
         console.log(err);

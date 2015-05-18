@@ -27,7 +27,6 @@ mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/teams_developm
 
 app.use(passport.initialize());
 
-
 app.use('/api', teamsRoutes);
 app.use('/api', usersRoutes);
 

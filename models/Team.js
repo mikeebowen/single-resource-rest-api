@@ -11,3 +11,4 @@ var teamSchema = mongoose.Schema({
 
 module.exports = mongoose.model('Team', teamSchema);
 
+// {name: 'test team 1', wins: 1, losses: 1, eat: ''}
